@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderController {
 
     @GetMapping("/capitalize")
-    public String capitalize(@RequestParam String input) {
+    public String capitalize(@RequestParam(name = "input") String input) {
         return StringUtils.capitalize(input);
     }
 } 
